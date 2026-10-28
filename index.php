@@ -130,8 +130,7 @@
       <div class="therapists-container top-therapists-container">
         <section class="therapists-wrap">
           <h2 class="therapists-title">本日の出勤</h2>
-          <?php $currentDatetime = current_datetime(); ?>
-          <?php $day = $currentDatetime->format('Y-m-d'); ?>
+          <?php $day = date('Y-m-d', tribe_schedule_timestamp()); ?>
           <div class="schedule-therapists-wrap  top-schedule-therapist-wrap">
             <div class="box">
               <ul class="therapist-list-wrap">

@@ -88,7 +88,7 @@
                 <?php
                     if ($rows) {
                       foreach ($rows as $val) {
-                        if ($val->staff_id == $uid && $val->date == date('Y-m-d', current_time('timestamp'))) {
+                        if ($val->staff_id == $uid && $val->date == date('Y-m-d', tribe_schedule_timestamp())) {
                           echo '<div class="ranking-realtime">本日出勤</div>';
                           if (strcmp($val->workplace, "未選択")) {
                             echo '<span class="shop">'.$val->workplace.'</span>';
@@ -173,7 +173,7 @@
                 <?php
                     if ($rows) {
                       foreach ($rows as $val) {
-                        if ($val->staff_id == $uid && $val->date == date('Y-m-d', current_time('timestamp'))) {
+                        if ($val->staff_id == $uid && $val->date == date('Y-m-d', tribe_schedule_timestamp())) {
                           echo '<div class="ranking-realtime">本日出勤</div>';
                           if (strcmp($val->workplace, "未選択")) {
                             echo '<span class="shop">'.$val->workplace.'</span>';
